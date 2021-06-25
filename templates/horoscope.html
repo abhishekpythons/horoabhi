@@ -46,7 +46,7 @@
             </div>
         </header>
         <hr class='m-2'>
-        <p class='lg:w-1/2 md:w-1/2, sm:w-full pl-8'>
+        <p class='lg:w-1/2 md:w-1/2, sm:w-full pl-8 m-8 border-l-8 border-red-500'>
             <strong>{{current_date}} - </strong>
             {{description}}
         </p>
@@ -59,7 +59,11 @@
             <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 <span class='text-gray-500 text-lg'>{{key}}</span>
                 <br>
+                {% if key == 'Match' %}
+                <span class='text-gray-800 text-xl'><a href="/horoscope/{{value}}/today">{{value}}</a></span>
+                {% else %}
                 <span class='text-gray-800 text-xl'>{{value}}</span>
+                {% endif %}
             </div>
         </div>
         {% endfor %}
