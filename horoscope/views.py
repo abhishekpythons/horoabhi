@@ -3,13 +3,17 @@ import requests
 
 
 signs=['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagitarus', 'capricorn', 'aquarius', 'pisces']
-dates=['Mar 21-Apr 19', 'Apr 20-May 20', 'May 21-Jun 20', 
-    'Jun 21- Jul 22', 'Jul 23-Aug 22', 'Aug 23-Sep 22',
-    'Sep 23-Oct 22', 'Oct 23-Nov 21', 'Nov 22-Dec 21',
-    'Dec 22-Jan 19', 'Jan 20-Feb 18', 'Feb 19-March 20']
+dates=['21 Mar-19 Apr', '20 Apr-20 May', '21 May-20 Jun', 
+    '21 Jun- 22 Jul', '23 Jul-22 Aug', '23 Aug-22 Sep',
+    '23 Sep-22 Oct', '23 Oct-21 Nov', '22 Nov-21 Dec',
+    '22 Dec-19 Jan', '20 Jan-18 Feb', '19 Feb-20 Mar']
+color = ['lightblue', 'lightcoral', 'cyan', 'lightgreen', 'lightpink', 'lightsalmon', 'lightseagreen', 'rgb(226, 81, 231)', 'lightsteelblue', 'yellow', 'lime','aquamarine']
 # Create your views here.
 def home(request):
-    context={'sign_dates':dict(zip(signs, dates))}
+    tmp = {}
+    for i in range(12):
+        tmp[signs[i]] = {'color':color[i], 'date':{'from':dates[i].split('-')[0],'to':dates[i].split('-')[1]}}
+    context={'sign_dates': tmp}
     return render(request, 'index.html', context=context)
 
 def horo(request, sign='aries', day='today'):
