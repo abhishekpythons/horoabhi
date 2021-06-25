@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+{% block title %}Horoscope{% endblock %}
+{% block body %}
+<section>
+    <span style="text-transform: capitalize" class='pl-8 text-6xl '><strong>{{sign}}</strong> Horoscope</span>
+</section>
+<section>
+    <article>
+        <header>
+            <div class="container mx-auto flex flex-wrap pt-2 pd-2 flex-col md:flex-row items-center">
+                <nav class='text-gray-600' id="navbar">
+                    <a class='mr-5 hover:text-gray-900' href="/horoscope/{{sign}}/yesterday">Yesterday</a>
+                    <a class='mr-5 hover:text-gray-900' href="/horoscope/{{sign}}/today">Today</a>
+                    <a class='mr-5 hover:text-gray-900' href="/horoscope/{{sign}}/tomorrow">Tomorrow</a>
+                </nav>
+                <!-- This example requires Tailwind CSS v2.0+ -->
+                <div class="relative inline-block text-left">
+                    <div>
+                    <button type="button" id='chng-sign' class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                        Change sign
+                        <!-- Heroicon name: solid/chevron-down -->
+                        <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    </div>
+                
+                    <!--
+                    Dropdown menu, show/hide based on menu state.
+                
+                    Entering: "transition ease-out duration-100"
+                        From: "transform opacity-0 scale-95"
+                        To: "transform opacity-100 scale-100"
+                    Leaving: "transition ease-in duration-75"
+                        From: "transform opacity-100 scale-100"
+                        To: "transform opacity-0 scale-95"
+                    -->
+                    <div id='menu' class="origin-top-right absolute right-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class='py-1' role="none">
+                        {% for i in signs %}
+                            <a href="/horoscope/{{i}}/{{day}}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2" style="text-transform: capitalize;">{{i}} {{sign_dates.forloop.counter}}</a>
+                        {% endfor %}
+                    </div>
+                    </div>
+                </div>  
+            </div>
+        </header>
+        <hr class='m-2'>
+        <p class='lg:w-1/2 md:w-1/2, sm:w-full pl-8'>
+            <strong>{{current_date}} - </strong>
+            {{description}}
+        </p>
+    </article>
+</section>
+<section>
+    <div class="flex flex-wrap -m-4 text-center pl-2">
+        {% for key,value in compatibility.items %}
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-1/2">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <span class='text-gray-500 text-lg'>{{key}}</span>
+                <br>
+                <span class='text-gray-800 text-xl'>{{value}}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="flex flex-wrap -m-4 text-center pl-2">
+        {% for key,value in about.items %}
+        <div class="p-4 md:w-1/6 sm:w-1/2 w-1/3">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <span class='text-gray-500 text-lg' style="font-size:20px;">{{key}}</span>
+                <br>
+                <span class='text-gray-800 text-xl'>{{value}}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
+
+<script>
+    const targetDiv = document.getElementById("menu");
+    targetDiv.style.display = "none"
+    const btn = document.getElementById("chng-sign");
+    btn.onmouseover = function(){
+        targetDiv.style.display = "block"
+    }
+    targetDiv.onmouseover = function(){
+        targetDiv.style.display = "block"
+    }
+    btn.onmouseleave = function(){
+        targetDiv.style.display = "none"
+    }
+    targetDiv.onmouseleave = function(){
+        targetDiv.style.display = "none"
+    }
+</script>
+{% endblock %}
