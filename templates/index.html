@@ -1,7 +1,7 @@
 {% extends 'layout.html'%}
 {% block body %}
 <main>
-    <section>
+    <section id='find'>
         <article>
             <header>
                 <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Find your Zodiac </a></div>
@@ -9,11 +9,11 @@
             <div class="container mb-4 ml-6 md:mx-auto md:w-1/2 sm:mx-auto sm:w-1/2 w-full" >
             <form action="/" method='post'>
                 {% csrf_token %}
-                <input required type="text" placeholder="Name" id="name" name="name" class="w-1/2 -ml-4 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                <input type="date" name="DOB" id="dob" class='w-1/2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'>
+                <input required type="text" placeholder="Name" id="name" name="name" class="w-1/2 -ml-4 bg-white rounded border border-red-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <input type="date" placeholder='date of birth' name="DOB" id="dob" class='w-1/2 bg-white rounded border border-red-300  focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'>
                 <div class=' w-full mt-2'>
-                    <button type="submit" class='flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg' onmouseover="document.getElementById('output').style.diaplay='none' ">
-                        Find
+                    <button type="submit" class='flex mx-auto text-white bg-red-400 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded-full text-lg' onmouseover="document.getElementById('output').style.diaplay='none' ">
+                        Find 
                     </button>
                 </div>
             </form>
@@ -81,7 +81,7 @@
             <img src="https://source.unsplash.com/1600x900/?nature,flowers,space,friendship,ocean,valleys,butterfly,colors,bonshai,asthetic,zodiac" alt="random-image">
             <div class="p-2 w-full">
                 <a href="/">
-                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg">
+                <button class="flex mx-auto text-white bg-red-400 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded-full text-lg">
                     Refresh
                 </button>
                 </a>
