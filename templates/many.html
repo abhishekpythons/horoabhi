@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<style>
+	.component {
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	}
+
+	blockquote {
+		background:
+			linear-gradient(to right, #039be5 6px, transparent 4px) 0 100%,
+			linear-gradient(to left, #039be5 6px, transparent 4px) 100% 0,
+			linear-gradient(to bottom, #039be5 6px, transparent 4px) 100% 0,
+			linear-gradient(to top, #039be5 6px, transparent 4px) 0 100%;
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+	}
+
+	/* -- create the quotation marks -- */
+	blockquote:before,
+	blockquote:after {
+		font-family: FontAwesome;
+		position: absolute;
+		color: #039be5;
+		font-size: 34px;
+	}
+
+	blockquote:before {
+		content: open-quote;
+		top: -12px;
+		margin-right: -20px;
+		right: 100%;
+	}
+
+	blockquote:after {
+		content: close-quote;
+		margin-left: -20px;
+		left: 100%;
+		top: auto;
+		bottom: -20px;
+	}
+</style>
+
+<main>
+    <section>
+            {% if app == 'images' %}
+            <div class='lg:w-3/4 sm:w-full w-full mx-auto'>
+                <img src="https://source.unsplash.com/1600x900/?nature,flowers,space,friendship,ocean,valleys,butterfly,colors,bonshai,asthetic,zodiac" alt="random-image">
+                <div class="p-2 w-full">
+                    <a href="/images">
+                    <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg">
+                        Refresh
+                    </button>
+                    </a>
+                </div>
+            </div>
+            {% elif app == 'quotes' %}
+            <div class="component p-10 mx-1 md:mx-10 text-xl" style="background-image:url('https://source.unsplash.com/1600x400/?nature,ocean,valley,asthetic,colors,life,happiness,flower,smile,cute' ">
+            <blockquote class="relative text-white text-center p-10 w-full m-1 ">
+                <span class='bg-red-500'>{{quote.q}}</span>
+                <br>
+                <div class='text-right'><span class='bg-red-500'> - {{quote.a}}</span></div>
+            </blockquote>
+            </div>
+            <div class="p-2 w-full">
+                <a href="/quotes">
+                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg">
+                    Refresh
+                </button>
+                </a>
+            </div>
+            {% endif %}
+    </section>
+</main>
+{% endblock %}

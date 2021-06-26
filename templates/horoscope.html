@@ -1,20 +1,18 @@
 {% extends 'layout.html' %}
 {% block title %}Horoscope{% endblock %}
 {% block body %}
-<section>
-    <span style="text-transform: capitalize" class='pl-8 text-6xl '><strong>{{sign}}</strong> Horoscope</span>
-</section>
-<section>
+<section class='pl-16'>
+    <span style="text-transform: capitalize" class='text-6xl '><strong>{{sign}}</strong> Horoscope</span>
     <article>
         <header>
             <div class="container mx-auto flex flex-wrap pt-2 pd-2 flex-col md:flex-row items-center">
-                <nav class='text-gray-600' id="navbar">
-                    <a class='mr-5 hover:text-gray-900' href="/horoscope/{{sign}}/yesterday">Yesterday</a>
-                    <a class='mr-5 hover:text-gray-900' href="/horoscope/{{sign}}/today">Today</a>
-                    <a class='mr-5 hover:text-gray-900' href="/horoscope/{{sign}}/tomorrow">Tomorrow</a>
+                <nav class='text-gray-600 mb-6' id="navbar">
+                    <a class="hover:text-gray-900 p-2 {% if day == 'yesterday' %}text-red-500 border-b-4 border-red-500 {% endif  %}"  href="/horoscope/{{sign}}/yesterday">Yesterday</a>
+                    <a class="hover:text-gray-900 p-2 {% if day == 'today' %}text-red-500 border-b-4 border-red-500 {% endif  %}" href="/horoscope/{{sign}}/today">Today</a>
+                    <a class="hover:text-gray-900 p-2 {% if day == 'tomorrow' %}text-red-500 border-b-4 border-red-500 {% endif  %}" href="/horoscope/{{sign}}/tomorrow">Tomorrow</a>
                 </nav>
                 <!-- This example requires Tailwind CSS v2.0+ -->
-                <div class="relative inline-block text-left">
+                <div class="relative inline-block text-left mx-auto">
                     <div>
                     <button type="button" id='chng-sign' class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" id="menu-button" aria-expanded="true" aria-haspopup="true">
                         Change sign
@@ -46,7 +44,7 @@
             </div>
         </header>
         <hr class='m-2'>
-        <p class='lg:w-1/2 md:w-1/2, sm:w-1/2 pl-8 m-8 border-l-8 border-red-500'>
+        <p class='lg:w-1/2 md:w-1/2, sm:w-1/2 pl-8 m-8 border-l-8 border-red-500 text-xl' style="font-family: 'Lora', serif;">
             <strong>{{current_date}} - </strong>
             {{description}}
         </p>

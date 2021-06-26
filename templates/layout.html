@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-    <title>{% block title %}{% endblock%}</title>
+    <title>{% block title %}{% endblock%}</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
-<body style='padding:0; margin:0;'> 
-    <header>
-        <div class='text-gray-800 text-4xl text-center'>HoroAbhi</div>
-    </header>
+<body style='padding:0; margin:0;'>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a href='/' class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" stroke="#ffbf00" fill='#ffbf00' stroke-linecap="round" stroke-linejoin="round" stroke-width="5" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 512 512">
+          <polygon fill="#ffffff" stroke="#ffffff" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="  259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08   29.274,197.007 188.165,173.919 "/>
+        </svg>
+        <span class="ml-3 text-xl"> HoroAbhi</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href='/' class="mr-5 hover:text-gray-900 p-2 {% if app == 'home' %}text-red-500 border-b-4 border-red-500 {% endif  %}">Home</a>
+        <a href='/quotes/' class="mr-5 hover:text-gray-900 p-2 {% if app == 'quotes' %}text-red-500 border-b-4 border-red-500 {% endif  %}">quote</a>
+        <a href='/images/' class="mr-5 hover:text-gray-900 p-2 {% if app == 'images' %}text-red-500 border-b-4 border-red-500 {% endif  %}">image</a>
+        <a href='/horoscope' class="mr-5 hover:text-gray-900 p-2 {% if app == 'horoscope' %}text-red-500 border-b-4 border-red-500 {% endif  %}">Horoscopes</a>
+      </nav>
+    </div>
+  </header>
+  <hr>
     {% block body %}
     {% endblock %}
 </body>

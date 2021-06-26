@@ -1,11 +1,41 @@
-{% extends "layout.html"%}
-{% block title %}Horoscope{% endblock %}
+{% extends 'layout.html'%}
 {% block body %}
-<main id="mainsection">
+<main>
     <section>
         <article>
             <header>
-                <div class='text-center text-4xl'>Choose your Zodiac</div>
+                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Find your Zodiac </a></div>
+            </header>
+            <div class="container mb-4 ml-6 md:mx-auto md:w-1/2 sm:mx-auto sm:w-1/2 w-full" >
+            <form action="" method='post'>
+                {% csrf_token %}
+                <input type="text" placeholder="Name" id="name" name="name" class="w-1/2 -ml-4 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <input type="date" name="DOB" id="dob" class='w-1/2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'>
+                <div class=' w-full mt-2'>
+                    <button type="submit" class='flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg' onmouseover="document.getElementById('output').style.diaplay='none' ">
+                        Find
+                    </button>
+                </div>
+            </form>
+            </div>
+        </article>
+        <article id='output' class='w-full bg-white rounded border border-gray-300 ml-2 md:ml-0 sm:ml-0 lg:w-1/4 lg:mx-auto md:mx-auto'>
+            <header>
+                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Your sign </a></div>
+            </header>
+            <div class='container mb-4 md:mx-auto md:w-1/4 sm:mx-auto sm:w-1/2 w-full'>
+                <a href="/horoscope/{{output_sign}}/today">
+                <div class='w-full bg-white rounded border border-gray-300 text-center'>
+                    hello
+                </div>
+            </a>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <header>
+                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Choose your Zodiac </a></div>
             </header>
                 <div class="flex flex-wrap -m-4 text-center p-4">
                     {% for key,value in sign_dates.items %}
@@ -14,7 +44,7 @@
                         <div class="border-2 border-gray-200 py-6 rounded-lg" style='background-color:{{value.color}}'>
                             <span class='text-gray-800 text-xl' style='text-transform: capitalize'>{{key}}</span>
                             <br>
-                            <span class='text-gray-500 text-sm'>from {{value.date.from}}<br>to {{value.date.to}}</span>
+                            <span class='text-gray-500 text-sm'>D.O.B<br>from {{value.date.from}}<br>to {{value.date.to}}</span>
                         </div>
                         </a>
                     </div>
@@ -22,5 +52,42 @@
                 </div>
         </article>
 </section>
+
+<hr class='mb-2 mt-8'>
+
+<section>
+    <article>
+        <header>
+            <div class='text-3xl text-center'> <a href="/quotes/">Quote</a></div>
+        </header>
+        <div class="component p-10 mx-1 md:mx-10 text-xl mt-4 mb-16" style="background-image:url('https://source.unsplash.com/1600x400/?nature,ocean,valley,asthetic,colors,life,happiness,flower,smile,cute' ">
+            <blockquote class="relative text-white text-center p-10 w-full m-1 ">
+                <span class='bg-red-500'>{{quote.q}}</span>
+                <br>
+                <div class='text-right'><span class='bg-red-500'> - {{quote.a}}</span></div>
+            </blockquote>
+        </div>
+    </article>
+
+    <hr class='mb-2 mt-8'>
+
+    <article>
+        <header>
+            <div class='text-3xl text-center'> <a href="/images"> Random Image </a> </div>
+        </header>
+        <div class='lg:w-3/4 sm:w-full w-full mx-auto  mt-4 mb-16'>
+            <img src="https://source.unsplash.com/1600x900/?nature,flowers,space,friendship,ocean,valleys,butterfly,colors,bonshai,asthetic,zodiac" alt="random-image">
+            <div class="p-2 w-full">
+                <a href="/">
+                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg">
+                    Refresh
+                </button>
+                </a>
+            </div>
+        </div>
+    </article>
+
+</section>
+
 </main>
 {% endblock %}
