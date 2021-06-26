@@ -7,9 +7,9 @@
                 <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Find your Zodiac </a></div>
             </header>
             <div class="container mb-4 ml-6 md:mx-auto md:w-1/2 sm:mx-auto sm:w-1/2 w-full" >
-            <form action="" method='post'>
+            <form action="/" method='post'>
                 {% csrf_token %}
-                <input type="text" placeholder="Name" id="name" name="name" class="w-1/2 -ml-4 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                <input required type="text" placeholder="Name" id="name" name="name" class="w-1/2 -ml-4 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                 <input type="date" name="DOB" id="dob" class='w-1/2 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'>
                 <div class=' w-full mt-2'>
                     <button type="submit" class='flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-full text-lg' onmouseover="document.getElementById('output').style.diaplay='none' ">
@@ -19,6 +19,7 @@
             </form>
             </div>
         </article>
+        {% if output_sign != 'None' %}
         <article id='output' class='w-full bg-white rounded border border-gray-300 ml-2 md:ml-0 sm:ml-0 lg:w-1/4 lg:mx-auto md:mx-auto'>
             <header>
                 <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Your sign </a></div>
@@ -26,11 +27,12 @@
             <div class='container mb-4 md:mx-auto md:w-1/4 sm:mx-auto sm:w-1/2 w-full'>
                 <a href="/horoscope/{{output_sign}}/today">
                 <div class='w-full bg-white rounded border border-gray-300 text-center'>
-                    hello
+                    {{output_sign}}
                 </div>
             </a>
             </div>
         </article>
+        {% endif %}
     </section>
     <section>
         <article>

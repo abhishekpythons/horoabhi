@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 import requests
 from django.contrib.auth.models import User
+from .models import Person
+
 
 signs=['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagitarus', 'capricorn', 'aquarius', 'pisces']
 dates=['21 Mar-19 Apr', '20 Apr-20 May', '21 May-20 Jun', 
@@ -16,13 +18,31 @@ def home(request):
         tmp[signs[i]] = {'color':color[i], 'date':{'from':dates[i].split('-')[0],'to':dates[i].split('-')[1]}}
     context={'app':'home','sign_dates': tmp, 
     'signs':signs,
-    'quote':eval(r._content)[0]}
-    return render(request,'index.html',context=context)
+    'quote':eval(r._content)[0],}
+    if request.method=='POST':
+        name = request.POST['name']
+        dob = request.POST['DOB']
+        p = Person.create(name, dob)
+        p.save()
+        tmp = [(dates[i],dates[i+1]) for i in range(-3,9)]
+        mon = eval(dob.split('-')[1].lstrip('0'))
+        day = eval(dob.split('-')[2].lstrip('0'))
+        ran = tmp[mon-1]
+        partition = [eval(ran[0].split('-')[1].lstrip().split(' ')[0]),eval(ran[1].split('-')[0].lstrip().split(' ')[0])]
+        if day in range(0,partition[0]):
+            rang = ran[0]
+        elif day in range(partition[1],32):
+            rang = ran[1]
+        else:
+            rang=None
+        context['output_sign']=dict(zip(dates,signs))[rang] if rang else 'Enter Valid Date'
+
+        return render(request,'index.html',context=context)
+    else:
+        context['output_sign']='None'
+        return render(request,'index.html',context=context)
 
 def chooseZodiac(request):
-    if request.method == 'POST':
-        user = User.objects.create_user(request.POST['name'], 'lennon@thebeatles.com', 'johnpassword')
-
     tmp = {}
     for i in range(12):
         tmp[signs[i]] = {'color':color[i], 'date':{'from':dates[i].split('-')[0],'to':dates[i].split('-')[1]}}
@@ -64,3 +84,8 @@ def quotes(request):
     return render(request, 'many.html', context={'app':'quotes',
     'signs':signs,
     'quote':eval(r._content)[0]})
+
+    
+
+    
+
