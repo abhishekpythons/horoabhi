@@ -10,6 +10,7 @@ dates=['21 Mar-19 Apr', '20 Apr-20 May', '21 May-20 Jun',
     '23 Sep-22 Oct', '23 Oct-21 Nov', '22 Nov-21 Dec',
     '22 Dec-19 Jan', '20 Jan-18 Feb', '19 Feb-20 Mar']
 color = ['lightblue', 'lightcoral', 'cyan', 'lightgreen', 'lightpink', 'lightsalmon', 'lightseagreen', 'rgb(226, 81, 231)', '#8bbe1b', 'lightsteelblue', '#40e0d0','aquamarine']
+images=['nature', 'underwater', 'coral','galaxy', 'star', 'colors', 'butterfly', 'asthetic', 'lifestyle']
 # Create your views here.
 def home(request):
     tmp = {}
@@ -18,7 +19,9 @@ def home(request):
         tmp[signs[i]] = {'color':color[i], 'date':{'from':dates[i].split('-')[0],'to':dates[i].split('-')[1]}}
     context={'app':'home','sign_dates': tmp, 
     'signs':signs,
-    'quote':eval(r._content)[0],}
+    'quote':eval(r._content)[0],
+    'images':images}
+
     if request.method=='POST':
         name = request.POST['name']
         dob = request.POST['DOB']
@@ -76,7 +79,7 @@ def horo(request, sign='aries', day='today'):
     return render(request, 'horoscope.html', context=context)
 
 def imgs(request):
-    return render(request, 'many.html', context={'app':'images','signs':signs})
+    return render(request, 'many.html', context={'app':'images','signs':signs, 'images':images})
 
 def quotes(request):
     params=(('author','chanakya'),)

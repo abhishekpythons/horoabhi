@@ -1,6 +1,97 @@
 {% extends 'layout.html'%}
 {% load static %}
 {% block body %}
+<style>
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  img{
+      background: url('{% static "signature.jpeg" %}');
+  }
+</style>
 <main>
     <section id='find'>
         <article>
@@ -61,10 +152,10 @@
 <section>
     <article>
         <header>
-            <div class='text-3xl text-center' style="font-family: 'Viaoda Libre', cursive"> <a href="/quotes/">Quote</a></div>
+            <div class='text-4xl text-center' style="font-family: 'Viaoda Libre', cursive"> <a href="/quotes/">Quote</a></div>
         </header>
-        <div class="component p-10 mx-1 md:mx-10 text-xl mt-4 mb-16" style="background-image:url('https://source.unsplash.com/1600x400/?nature,ocean,valley,asthetic,colors,life,happiness,flower,smile,cute' ">
-            <blockquote style="font-family: 'Great Vibes', cursive;" class="relative text-red-600 text-center p-10 w-full m-1 ">
+        <div class="component p-10 mx-1 md:mx-10 text-2xl mt-4 mb-16" style="background-image:url('https://source.unsplash.com/1600x400/?nature,ocean,valley,asthetic,colors,life,happiness,flower,smile,cute' ">
+            <blockquote style="font-family: 'Great Vibes', cursive;" class="relative text-green-600 text-center p-10 w-full m-1 ">
                 <span class='bg-white'>{{quote.q}}</span>
                 <br>
                 <div class='text-right'><span class='bg-white'> - {{quote.a}}</span></div>
@@ -76,10 +167,34 @@
 
     <article>
         <header>
-            <div class='text-3xl text-center'> <a href="/images"  style="font-family: 'Viaoda Libre', cursive"> Random Image </a> </div>
+            <div class='text-3xl text-center'> <a href="/images"  style="font-family: 'Viaoda Libre', cursive"> Refresh to change Image </a> </div>
         </header>
+        <div class="container mx-auto">
+            {% for img in images %}
+            <div class="mySlides">
+              <div class="numbertext">{{forloop.counter}} / 9</div>
+                <img src="https://source.unsplash.com/1600x900/?{{img}}" style="width:100%">
+            </div>
+            {% endfor %}
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption">kldlksjl</p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                {% for img in images %}
+                <div class="column">
+                <img class="demo cursor" src="https://source.unsplash.com/1600x900/?{{img}}" style="width:100%" onclick="currentSlide(1)" alt=" ">
+                </div>
+                {% endfor %}
+            </div>
+            </div>        
         <div class='lg:w-3/4 sm:w-full w-full mx-auto  mt-4 mb-16'>
-            <img src="https://source.unsplash.com/1600x900/?nature,flowers,space,friendship,ocean,valleys,butterfly,colors,bonshai,asthetic,zodiac" alt="random-image">
             <div class="p-2 w-full">
                 <a href="/">
                 <button class="flex mx-auto text-white bg-red-400 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded-full text-lg">
@@ -93,4 +208,37 @@
 </section>
 
 </main>
+
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 {% endblock %}
