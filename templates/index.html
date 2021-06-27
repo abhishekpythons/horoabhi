@@ -91,6 +91,13 @@
   img{
       background: url('{% static "signature.jpeg" %}');
   }
+  {% autoescape off %}
+  {% for key,value in sign_dates.items %}
+  #{{key}}{
+    background-color:{{value.color}}; 
+  }
+  {% endfor %}
+  {% endautoescape %}
 </style>
 <main>
     <section id='find'>
@@ -135,7 +142,7 @@
                     {% for key,value in sign_dates.items %}
                     <div class="p-1 md:w-1/6 sm:w-1/3 w-1/3">
                         <a href="/horoscope/{{key}}/today">
-                        <div class="border-2 border-gray-200 py-6 rounded-lg" style='background-color:{{value.color}}'>
+                        <div class="border-2 border-red-200 py-6 rounded-lg" id="{{key}}">
                             <span class='text-gray-800 text-xl' style='text-transform: capitalize'>{{key}}</span>
                             <br>
                             <span class='text-gray-500 text-sm'>D.O.B<br>from {{value.date.from}}<br>to {{value.date.to}}</span>
@@ -189,7 +196,7 @@
             <div class="row">
                 {% for img in images %}
                 <div class="column">
-                <img class="demo cursor" src="https://source.unsplash.com/1600x900/?{{img}}" style="width:100%" onclick="currentSlide(1)" alt=" ">
+                <img class="demo cursor" src="https://source.unsplash.com/1600x900/?{{img}}" style="width:100%" onclick="currentSlide({{forloop.counter}})" alt=" ">
                 </div>
                 {% endfor %}
             </div>

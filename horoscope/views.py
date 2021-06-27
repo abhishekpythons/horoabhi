@@ -9,7 +9,7 @@ dates=['21 Mar-19 Apr', '20 Apr-20 May', '21 May-20 Jun',
     '21 Jun- 22 Jul', '23 Jul-22 Aug', '23 Aug-22 Sep',
     '23 Sep-22 Oct', '23 Oct-21 Nov', '22 Nov-21 Dec',
     '22 Dec-19 Jan', '20 Jan-18 Feb', '19 Feb-20 Mar']
-color = ['lightblue', 'lightcoral', 'cyan', 'lightgreen', 'lightpink', 'lightsalmon', 'lightseagreen', 'rgb(226, 81, 231)', '#8bbe1b', 'lightsteelblue', '#40e0d0','aquamarine']
+color = ['lightblue', 'lightcoral', 'cyan', 'lightgreen', 'lightpink', 'aquamarine', 'lightseagreen', 'rgb(226, 81, 231)', '#8bbe1b', 'lightsteelblue', '#41e0d1','#ffc6b3']
 images=['nature', 'underwater', 'coral','galaxy', 'star', 'colors', 'butterfly', 'asthetic', 'lifestyle']
 # Create your views here.
 def home(request):
