@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-
+{% load static %}
 {% block body %}
 <style>
 	.component {
@@ -69,7 +69,9 @@
                 </button>
                 </a>
             </div>
-            {% endif %}
+			{% elif 'app' == 'svg-edit' %}
+			<img src="{% static 'signature.jpeg' %}" alt="any">
+			{% endif %}
     </section>
 </main>
 {% endblock %}

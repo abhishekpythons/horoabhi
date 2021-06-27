@@ -1,10 +1,11 @@
 {% extends 'layout.html'%}
+{% load static %}
 {% block body %}
 <main>
     <section id='find'>
         <article>
             <header>
-                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Find your Zodiac </a></div>
+                <div class='text-center text-4xl mb-8 mt-4 ' style="font-family: 'Viaoda Libre', cursive;"> <a href="/horoscope/"> Find your Zodiac </a></div>
             </header>
             <div class="container mb-4 ml-6 md:mx-auto md:w-1/2 sm:mx-auto sm:w-1/2 w-full" >
             <form action="/" method='post'>
@@ -22,7 +23,7 @@
         {% if output_sign != 'None' %}
         <article id='output' class='w-full bg-white rounded border border-gray-300 ml-2 md:ml-0 sm:ml-0 lg:w-1/4 lg:mx-auto md:mx-auto'>
             <header>
-                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Your sign </a></div>
+                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/" style="font-family: 'Viaoda Libre', cursive;"> Your sign </a></div>
             </header>
             <div class='container mb-4 md:mx-auto md:w-1/4 sm:mx-auto sm:w-1/2 w-full'>
                 <a href="/horoscope/{{output_sign}}/today">
@@ -37,7 +38,7 @@
     <section>
         <article>
             <header>
-                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/"> Choose your Zodiac </a></div>
+                <div class='text-center text-4xl mb-8 mt-4 '> <a href="/horoscope/" style="font-family: 'Viaoda Libre', cursive;"> Choose your Zodiac </a></div>
             </header>
                 <div class="flex flex-wrap -m-4 text-center p-4">
                     {% for key,value in sign_dates.items %}
@@ -60,13 +61,13 @@
 <section>
     <article>
         <header>
-            <div class='text-3xl text-center'> <a href="/quotes/">Quote</a></div>
+            <div class='text-3xl text-center' style="font-family: 'Viaoda Libre', cursive"> <a href="/quotes/">Quote</a></div>
         </header>
         <div class="component p-10 mx-1 md:mx-10 text-xl mt-4 mb-16" style="background-image:url('https://source.unsplash.com/1600x400/?nature,ocean,valley,asthetic,colors,life,happiness,flower,smile,cute' ">
-            <blockquote class="relative text-white text-center p-10 w-full m-1 ">
-                <span class='bg-red-500'>{{quote.q}}</span>
+            <blockquote style="font-family: 'Great Vibes', cursive;" class="relative text-red-600 text-center p-10 w-full m-1 ">
+                <span class='bg-white'>{{quote.q}}</span>
                 <br>
-                <div class='text-right'><span class='bg-red-500'> - {{quote.a}}</span></div>
+                <div class='text-right'><span class='bg-white'> - {{quote.a}}</span></div>
             </blockquote>
         </div>
     </article>
@@ -75,7 +76,7 @@
 
     <article>
         <header>
-            <div class='text-3xl text-center'> <a href="/images"> Random Image </a> </div>
+            <div class='text-3xl text-center'> <a href="/images"  style="font-family: 'Viaoda Libre', cursive"> Random Image </a> </div>
         </header>
         <div class='lg:w-3/4 sm:w-full w-full mx-auto  mt-4 mb-16'>
             <img src="https://source.unsplash.com/1600x900/?nature,flowers,space,friendship,ocean,valleys,butterfly,colors,bonshai,asthetic,zodiac" alt="random-image">

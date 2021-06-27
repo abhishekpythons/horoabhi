@@ -1,0 +1,25 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<section>
+    <article>
+        <form action="/svg-edit/" method="post">
+            {% csrf_token %}
+            V-pixel: <input type="color" name="color1" id="color1">
+            D-gradient-dark<input type="color" name="color2" id="color2">
+            D-gradient-light:<input type="color" name="color3" id="color3">
+            Three-cube-outline:<input type="color" name="color4" id="color4">
+            3-cube-and-V-long:<input type="color" name="color5" id="color5">
+            V-short<input type="color" name="color6" id="color6">
+            <input type="submit" value="Update">
+        </form>
+    </article>
+</section>
+<section>
+    <article>
+        {% autoescape off %}
+        {{svg}}
+        {% endautoescape %}
+    </article>
+</section>
+{% endblock %}

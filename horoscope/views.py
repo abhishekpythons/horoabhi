@@ -9,7 +9,7 @@ dates=['21 Mar-19 Apr', '20 Apr-20 May', '21 May-20 Jun',
     '21 Jun- 22 Jul', '23 Jul-22 Aug', '23 Aug-22 Sep',
     '23 Sep-22 Oct', '23 Oct-21 Nov', '22 Nov-21 Dec',
     '22 Dec-19 Jan', '20 Jan-18 Feb', '19 Feb-20 Mar']
-color = ['lightblue', 'lightcoral', 'cyan', 'lightgreen', 'lightpink', 'lightsalmon', 'lightseagreen', 'rgb(226, 81, 231)', 'lightsteelblue', 'yellow', 'lime','aquamarine']
+color = ['lightblue', 'lightcoral', 'cyan', 'lightgreen', 'lightpink', 'lightsalmon', 'lightseagreen', 'rgb(226, 81, 231)', '#8bbe1b', 'lightsteelblue', '#40e0d0','aquamarine']
 # Create your views here.
 def home(request):
     tmp = {}
@@ -84,6 +84,31 @@ def quotes(request):
     return render(request, 'many.html', context={'app':'quotes',
     'signs':signs,
     'quote':eval(r._content)[0]})
+
+def svg_edit(request):
+    svg = open('C:/Users/Admin/Desktop/Logo .svg')
+    if request.method == 'POST':
+        color1 = request.POST['color1']
+        color2 = request.POST['color2']
+        color3 = request.POST['color3']
+        color4 = request.POST['color4']
+        color5 = request.POST['color5']
+        color6 = request.POST['color6']
+    else:
+        color1='#ff0000'
+        color2='#ffff00'
+        color3='#ff0000'
+        color4='#ffffff'
+        color5='#ff0000'
+        color6='#ff8000'
+    data = svg.read()
+    data = data.replace('{{color1}}',color1)
+    data = data.replace('{{color2}}',color2)
+    data = data.replace('{{color3}}',color3)
+    data = data.replace('{{color4}}',color4)
+    data = data.replace('{{color5}}',color5)
+    data = data.replace('{{color6}}',color6)
+    return render(request, 'for_svg.html', {'app':'home', 'svg':str(data)})
 
     
 

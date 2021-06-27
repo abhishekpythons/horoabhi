@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 180 180">
+<defs>
+<ref id="paramX" param="x" default="-10"/>
+<ref id="paramY" param="y" default="-10"/>
+<linearGradient y1="29.0332" id="LinearGradient_2" x1="58.2027" y2="150.124" x2="57.6196" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.82389 0 0 1.26411 -71.8491 -20.1111)">
+<stop stop-color="{{color3}}" offset="0"/>
+<stop stop-color="{{color2}}" offset="0.813107"/>
+</linearGradient>
+<linearGradient y1="142.64" id="LinearGradient_3" x1="65.8723" y2="141.781" x2="147.765" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.07408 -1.19324 1.2639 0.863538 -223.293 130.611)">
+<stop stop-color="{{color3}}" offset="0"/>
+<stop stop-color="{{color2}}" offset="0.813107"/>
+</linearGradient>
+<linearGradient y1="36.0121" id="LinearGradient_4" x1="148.37" y2="30.4411" x2="72.4455" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.22157 0.940493 -1.01556 1.13078 -25.4792 -87.5435)">
+<stop stop-color="{{color3}}" offset="0"/>
+<stop stop-color="{{color2}}" offset="0.813107"/>
+</linearGradient>
+<linearGradient y1="28.765" id="LinearGradient_5" x1="57.4881" y2="162.807" x2="58.5882" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.82389 0 0 1.15971 -71.8781 -19.2465)">
+<stop stop-color="{{color3}}" offset="0"/>
+<stop stop-color="{{color2}}" offset="0.813107"/>
+</linearGradient>
+</defs>
+<g id="Layer-V" vectornator:layerName="Layer-V">
+<path d="M56.6613+87.7663L56.6613+125.166L47.9036+125.446L48.1497+87.8816L56.6613+87.7663Z" fill-rule="evenodd" fill="{{color6}}" opacity="1"/>
+<path d="M47.9036+125.446L137.835+27.9065L141.325+31.1196L56.6613+125.166L47.9036+125.446Z" fill-rule="evenodd" fill="{{color5}}" opacity="1"/>
+<path stroke="{{color4}}" fill-rule="evenodd" stroke-width="0.478858" d="M141.243+21.957L146.641+26.8175L141.677+32.3299L136.279+27.4695L141.243+21.957Z" fill="{{color5}}" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+<path stroke="{{color4}}" fill-rule="evenodd" stroke-width="0.478858" d="M151.074+24.2414L153.84+26.7313L151.382+29.4607L148.617+26.9708L151.074+24.2414Z" fill="{{color5}}" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+<path stroke="{{color4}}" fill-rule="evenodd" stroke-width="0.478858" d="M140.483+10.4788L144.22+13.8439L140.707+17.7463L136.969+14.3812L140.483+10.4788Z" fill="{{color5}}" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
+<path stroke="{{color5}}" stroke-width="0.478858" d="M140.706+16.2723L141.711+23.9057" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+<path stroke="{{color5}}" stroke-width="0.478858" d="M150.001+27.0312L144.756+26.8286" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+</g>
+<g id="Layer-D" vectornator:layerName="Layer-D">
+<path d="M22.2985+87.8271L44.9122+87.8271C45.6133+87.8271+46.1817+88.2211+46.1817+88.707L46.1817+168.717C46.1817+169.203+45.6133+169.597+44.9122+169.597L22.2985+169.597L21.0126+169.607L21.0121+169.616C21.0121+169.616+21.0095+169.001+21.0289+168.717L21.0289+88.707C21.0289+88.2211+21.5973+87.8271+22.2985+87.8271Z" fill-rule="evenodd" fill="url(#LinearGradient_2)" opacity="1"/>
+<path d="M21.0043+169.61L108.306+70.4704C108.719+70.0117+123.911+83.6218+123.911+83.6218C123.911+83.6218+47.0075+169.928+46.5216+169.596L21.0043+169.61Z" fill-rule="evenodd" fill="url(#LinearGradient_3)" opacity="1"/>
+<path d="M45.9401+15.1775L123.629+83.1799L124.026+83.5161L112.928+95.9278L112.888+95.8721C112.806+95.969+23.3541+17.7463+23.3541+17.7463C22.8845+17.3847+45.4705+14.816+45.9401+15.1775Z" fill-rule="evenodd" fill="url(#LinearGradient_4)" opacity="1"/>
+<path d="M22.2695+14.8166L44.8832+14.8166C45.5844+14.8166+46.1527+15.178+46.1527+15.6238L46.1527+78.9697C46.1527+79.4155+45.5844+79.7769+44.8832+79.7769L22.2695+79.7769C21.5684+79.7769+21+79.4155+21+78.9697L21.3401+14.8187C21.3401+14.8187+21.9173+14.8166+22.2695+14.8166Z" fill-rule="evenodd" fill="url(#LinearGradient_5)" opacity="1"/>
+<path d="M24.3087+79.7769L28.1402+79.7769L28.1402+79.7769L28.1402+83.0082L28.1402+83.0082L24.3087+83.0082L24.3087+83.0082L24.3087+79.7769L24.3087+79.7769Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M31.2075+81.9311L33.7459+81.9311L33.7459+81.9311L33.7459+84.0853L33.7459+84.0853L31.2075+84.0853L31.2075+84.0853L31.2075+81.9311L31.2075+81.9311Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M36.4097+81.9311L39.0297+81.9311L39.0297+81.9311L39.0297+84.0853L39.0297+84.0853L36.4097+84.0853L36.4097+84.0853L36.4097+81.9311L36.4097+81.9311Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M39.9857+80.8907L41.3665+80.8907L41.3665+80.8907L41.3665+82.0793L41.3665+82.0793L39.9857+82.0793L39.9857+82.0793L39.9857+80.8907L39.9857+80.8907Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M29.1693+84.7107L30.7271+84.7107L30.7271+86.1373L29.1693+86.1373L29.1693+84.7107Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M39.5843+85.424L41.7679+85.424L41.7679+87.2928L39.5843+87.2928L39.5843+85.424Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M29.1693+82.5736L30.5552+82.5736L30.5552+83.7782L29.1693+83.7782L29.1693+82.5736Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M34.3916+80.8907L34.9758+80.8907L34.9758+81.5802L34.3916+81.5802L34.3916+80.8907Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M42.8712+80.8907L44.0927+80.8907L44.0927+81.9311L42.8712+81.9311L42.8712+80.8907Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M43.482+85.6023L45.7037+85.6023L45.7037+87.5566L43.482+87.5566L43.482+85.6023Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M44.7654+80.5578L45.7037+80.5578L45.7037+81.5802L44.7654+81.5802L44.7654+80.5578Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M25.1805+84.7107L26.8856+84.7107L26.8856+86.1373L25.1805+86.1373L25.1805+84.7107Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M30.7271+80.5578L31.6879+80.5578L31.6879+81.2354L30.7271+81.2354L30.7271+80.5578Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M34.3916+84.7107L34.9758+84.7107L34.9758+85.424L34.3916+85.424L34.3916+84.7107Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M37.7197+85.0674L39.0297+85.0674L39.0297+86.1373L37.7197+86.1373L37.7197+85.0674Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M36.4097+80.5578L37.7197+80.5578L37.7197+81.5802L36.4097+81.5802L36.4097+80.5578Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M42.1693+82.127L46.0161+82.127L46.0161+85.6023L42.1693+85.6023L42.1693+82.127Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M22.3994+85.7342L24.3087+85.7342L24.3087+87.4247L22.3994+87.4247L22.3994+85.7342Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M21.0141+80.8907L23.3541+80.8907L23.3541+82.872L21.0141+82.872L21.0141+80.8907Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M46.3222+84.5482L48.1497+84.5482L48.1497+86.238L46.3222+86.238L46.3222+84.5482Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M27.1851+83.7782L28.299+83.7782L28.299+84.718L27.1851+84.718L27.1851+83.7782Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M24.7355+86.8469L25.258+86.8469L25.258+87.2928L24.7355+87.2928L24.7355+86.8469Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M26.5495+86.5795L27.1851+86.5795L27.1851+87.0698L26.5495+87.0698L26.5495+86.5795Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M30.2126+86.5795L31.0222+86.5795L31.0222+87.2928L30.2126+87.2928L30.2126+86.5795Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M25.258+83.3134L26.151+83.3134L26.151+84.0853L25.258+84.0853L25.258+83.3134Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M29.7335+84.0853L30.1518+84.0853L30.1518+84.5482L29.7335+84.5482L29.7335+84.0853Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M32.4654+80.5578L33.4823+80.5578L33.4823+81.4109L32.4654+81.4109L32.4654+80.5578Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M21.9754+83.16L22.6307+83.16L22.6307+83.6994L21.9754+83.6994L21.9754+83.16Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M21.1695+84.9134L22.303+84.9134L22.303+85.9035L21.1695+85.9035L21.1695+84.9134Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M27.742+85.6023L28.299+85.6023L28.299+86.1373L27.742+86.1373L27.742+85.6023Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M35.8599+85.1839L36.7036+85.1839L36.7036+85.8698L35.8599+85.8698L35.8599+85.1839Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M38.6955+80.5578L39.5843+80.5578L39.5843+81.2354L38.6955+81.2354L38.6955+80.5578Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M41.7679+80.2364L42.5651+80.2364L42.5651+80.8907L41.7679+80.8907L41.7679+80.2364Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M42.5651+86.5795L43.1305+86.5795L43.1305+87.0698L42.5651+87.0698L42.5651+86.5795Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M34.9758+82.127L35.6298+82.127L35.6298+82.7258L34.9758+82.7258L34.9758+82.127Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M36.4097+86.1373L37.7197+86.1373L37.7197+87.5566L36.4097+87.5566L36.4097+86.1373Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M28.1402+86.5795L29.1693+86.5795L29.1693+87.5566L28.1402+87.5566L28.1402+86.5795Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M23.3541+84.0601L24.3087+84.0601L24.3087+84.9134L23.3541+84.9134L23.3541+84.0601Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M28.6548+80.7059L30.2126+80.7059L30.2126+82.0793L28.6548+82.0793L28.6548+80.7059Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M39.9857+83.16L41.3665+83.16L41.3665+84.3964L39.9857+84.3964L39.9857+83.16Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M34.3916+83.0082L36.1176+83.0082L36.1176+84.5482L34.3916+84.5482L34.3916+83.0082Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+<path d="M31.9888+84.718L34.9758+84.718L34.9758+87.5566L31.9888+87.5566L31.9888+84.718Z" fill-rule="evenodd" fill="{{color2}}" opacity="1"/>
+</g>
+<g id="Layer-Pixel-V" vectornator:layerName="Layer-Pixel-V">
+<path d="M92.3568+77.8182L93.0624+78.3282L92.7521+78.6714L92.4889+78.9625L91.7834+78.4525L92.3568+77.8182Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M93.5629+77.9368L93.9039+78.1926L93.654+78.4591L93.313+78.2033L93.5629+77.9368Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M94.4628+77.2644L94.4628+77.2644L94.4668+77.3797L94.4668+77.3797L94.4628+77.2644Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M98.0019+74.3731L98.6213+74.8378L98.0988+75.395L97.4793+74.9303L98.0019+74.3731Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M95.9669+76.5053L97.9894+78.067L96.5153+79.6844L94.4928+78.1227L95.9669+76.5053Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M98.7159+71.5123L99.6209+72.1912L98.7981+73.0687L97.8931+72.3898L98.7159+71.5123Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M97.8779+75.9418L98.76+76.6035L98.0037+77.41L97.1216+76.7482L97.8779+75.9418Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M99.3771+73.4795L99.8042+73.7999L99.4206+74.2089L98.9936+73.8885L99.3771+73.4795Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M101.268+70.4075L102.43+71.2788L101.514+72.2558L100.352+71.3846L101.268+70.4075Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M96.1165+74.6989L96.7767+75.1942L96.2549+75.7505L95.5947+75.2553L96.1165+74.6989Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M100.826+68.5784L101.253+68.8988L100.828+69.3523L100.401+69.0319L100.826+68.5784Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M103.254+70.8558L103.741+71.2208L103.315+71.6753L102.828+71.3103L103.254+70.8558Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M103.63+67.534L105.038+68.5906L103.964+69.7365L102.555+68.6799L103.63+67.534Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M99.6497+74.9802L100.523+75.6351L99.7983+76.4075L98.9254+75.7526L99.6497+74.9802Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M102.363+66.5634L102.992+67.0349L102.453+67.6096L101.824+67.1381L102.363+66.5634Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M94.928+79.4802L95.7684+80.2272L94.9971+81.0703L94.1579+80.2881L94.928+79.4802Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M101.18+72.6974L102.417+73.6251L101.31+74.8057L100.073+73.878L101.18+72.6974Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M99.7408+69.2926L100.634+69.9625L99.9579+70.6834L99.0648+70.0134L99.7408+69.2926Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M94.2667+75.7598L95.1266+76.4049L94.5424+77.0279L93.6825+76.3829L94.2667+75.7598Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M96.6562+72.6005L97.6513+73.3469L96.8902+74.1586L95.8951+73.4121L96.6562+72.6005Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M102.522+69.8075L102.898+70.0892L102.56+70.4496L102.184+70.1679L102.522+69.8075Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M102.82+71.5297L103.545+72.0736L102.862+72.8016L102.137+72.2577L102.82+71.5297Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M100.138+72.645L100.484+72.9049L100.22+73.1871L99.8731+72.9271L100.138+72.645Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M98.9232+70.7814L99.2077+70.9948L98.9696+71.2488L98.685+71.0354L98.9232+70.7814Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M98.1559+73.3223L98.5197+73.5952L98.1937+73.9428L97.8299+73.6699L98.1559+73.3223Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M93.0752+76.9549L93.5988+77.3477L93.1431+77.8337L92.6195+77.4409L93.0752+76.9549Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M94.8651+74.9232L95.1389+75.1286L94.9404+75.3403L94.6666+75.1349L94.8651+74.9232Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M96.9212+75.3284L97.372+75.6666L96.9837+76.0807L96.5329+75.7425L96.9212+75.3284Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M98.8814+77.0728L99.2758+77.3687L98.9405+77.7263L98.5461+77.4304L98.8814+77.0728Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M96.2683+79.8279L96.5354+80.0284L96.3347+80.2424L96.0675+80.042L96.2683+79.8279Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M104.537+69.4066L105.15+69.8672L104.617+70.4364L104.003+69.9759L104.537+69.4066Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M105.783+69.1145L106.055+69.3184L105.819+69.5693L105.548+69.3654L105.783+69.1145Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M104.518+67.4172L104.88+67.6884L104.565+68.0244L104.203+67.7531L104.518+67.4172Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M101.854+68.119L102.311+68.4616L101.89+68.9103L101.434+68.5677L101.854+68.119Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M93.8979+78.5588L94.3633+78.9079L93.9804+79.3161L93.5151+78.9671L93.8979+78.5588Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M95.6294+74.3734L95.9838+74.6393L95.6664+74.9778L95.312+74.7119L95.6294+74.3734Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M95.8204+75.8681L96.1337+76.1031L95.8416+76.4146L95.5283+76.1796L95.8204+75.8681Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M99.2507+74.7087L99.5206+74.9112L99.2701+75.1783L99.0002+74.9758L99.2507+74.7087Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M97.8012+71.356L98.1931+71.65L97.8971+71.9656L97.5053+71.6716L97.8012+71.356Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M101.521+69.2466L101.857+69.4984L101.575+69.799L101.239+69.5472L101.521+69.2466Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+<path d="M101.16+67.6913L101.458+67.9154L101.206+68.1848L100.907+67.9608L101.16+67.6913Z" fill-rule="evenodd" fill="{{color1}}" opacity="1"/>
+</g>
+</svg>
