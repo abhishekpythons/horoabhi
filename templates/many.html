@@ -124,7 +124,7 @@
 					{% for img in images %}
 					<div class="column">
 						<img class="demo cursor" src="https://source.unsplash.com/1600x900/?{{img}}" style="width:100%"
-							onclick="currentSlide(1)" alt=" ">
+							onclick="currentSlide({{forloop.counter}})" alt=" ">
 					</div>
 					{% endfor %}
 				</div>

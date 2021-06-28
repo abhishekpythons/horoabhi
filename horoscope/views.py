@@ -61,6 +61,7 @@ def horo(request, sign='aries', day='today'):
 
     r = requests.post('https://aztro.sameerkumar.website/', params=params)
     content = eval(r._content)
+    print(content)
     context={'app':'horoscope','sign': sign, 'day': day,
     'sign_dates':dict(zip(list(range(12)),dates)),
     'signs':signs,
@@ -112,8 +113,4 @@ def svg_edit(request):
     data = data.replace('{{color5}}',color5)
     data = data.replace('{{color6}}',color6)
     return render(request, 'for_svg.html', {'app':'home', 'svg':str(data)})
-
-    
-
-    
-
+ 
